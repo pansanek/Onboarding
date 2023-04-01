@@ -13,6 +13,8 @@ import androidx.navigation.navigation
 import com.mxalbert.sharedelements.LocalSharedElementsRootScope
 import ru.thekodingklowns.onboarding.presentation.navigation.screens.AppScreen
 import ru.thekodingklowns.onboarding.presentation.navigation.screens.AppTab
+import ru.thekodingklowns.onboarding.presentation.screens.users.Users
+import ru.thekodingklowns.onboarding.presentation.viewmodel.viewModelScopedTo
 
 @Composable
 fun AppNavigation(
@@ -31,9 +33,9 @@ fun AppNavigation(
 
     NavHost(
         navController = navController,
-        startDestination = AppTab.Leaderboard.route
+        startDestination = AppTab.Users.route
     ) {
-        leaderboard()
+        users()
 
         map()
 
@@ -43,15 +45,15 @@ fun AppNavigation(
     }
 }
 
-fun NavGraphBuilder.leaderboard() {
+fun NavGraphBuilder.users() {
     navigation(
-        route = AppTab.Leaderboard.route,
-        startDestination = AppTab.Leaderboard.startDestination
+        route = AppTab.Users.route,
+        startDestination = AppTab.Users.startDestination
     ) {
         composable(
-            route = AppScreen.Leaderboard.route
+            route = AppScreen.Users.route
         ) {
-
+            Users(it.viewModelScopedTo(AppTab.Users.route))
         }
     }
 }

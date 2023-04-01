@@ -8,7 +8,7 @@ sealed class AppScreen(
     val route: String,
     val navLink: String = route.substringBefore("/{")
 ) {
-    object Leaderboard: AppScreen(R.string.screen_leaderboard, "leaderboard")
+    object Users: AppScreen(R.string.screen_users, "leaderboard")
 
 
     object Map: AppScreen(R.string.screen_map, "map")

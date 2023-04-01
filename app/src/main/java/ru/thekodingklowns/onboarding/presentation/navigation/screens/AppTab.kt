@@ -12,7 +12,7 @@ sealed class AppTab(
     @StringRes val resourceId: Int,
     val icon: ImageVector
 ) {
-    object Leaderboard: AppTab("tab_leaderboard", AppScreen.Leaderboard.route, R.string.screen_leaderboard, Icons.Default.Leaderboard)
+    object Users: AppTab("tab_users", AppScreen.Users.route, R.string.screen_users, Icons.Default.Leaderboard)
 
     object Map: AppTab("tab_map", AppScreen.Map.route, R.string.screen_map, Icons.Default.Navigation)
 
@@ -23,7 +23,7 @@ sealed class AppTab(
     companion object {
         val tabs: List<AppTab>
             get() = listOf(
-                Leaderboard,
+                Users,
                 Map,
                 Quizzes,
                 Profile
