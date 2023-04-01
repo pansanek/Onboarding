@@ -52,9 +52,7 @@ fun ImageZoom(){
     var scale by remember{
         mutableStateOf(1f)
     }
-    val rotationState = remember{
-        mutableStateOf(1f)
-    }
+
     Column(modifier = Modifier.fillMaxSize()){
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -63,9 +61,9 @@ fun ImageZoom(){
                 .fillMaxWidth()
                 .padding(15.dp)
         ){
-            Text(text="ХУЙХУЙХУЙХУЙ", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            Text(text="Карта офиса", fontWeight = FontWeight.Bold, fontSize = 20.sp)
         }
-        Row(modifier = Modifier
+        Box(modifier = Modifier
             .fillMaxSize()
             .clip(RectangleShape)
             .pointerInput(Unit) {
@@ -75,12 +73,12 @@ fun ImageZoom(){
 
             }
         ){
-            androidx.compose.foundation.Image(painter = painterResource(id = R.drawable.ic_launcher_foreground), contentDescription = "Image",
+            androidx.compose.foundation.Image(painter = painterResource(id = R.drawable.image_1), contentDescription = "Image",
             modifier = Modifier
-                .align(Alignment.CenterVertically)
+                .align(Alignment.Center)
                 .graphicsLayer(
-                    scaleX = maxOf(.5f, minOf(3f, scale)),
-                    scaleY = maxOf(.5f, minOf(3f, scale)),
+                    scaleX = maxOf(.10f, minOf(10f, scale)),
+                    scaleY = maxOf(.10f, minOf(10f, scale)),
                 ))
         }
     }

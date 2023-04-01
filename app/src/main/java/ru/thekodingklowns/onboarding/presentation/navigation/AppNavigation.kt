@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navigation
 import com.mxalbert.sharedelements.LocalSharedElementsRootScope
+import map.ImageZoom
 import ru.thekodingklowns.onboarding.presentation.navigation.screens.AppScreen
 import ru.thekodingklowns.onboarding.presentation.navigation.screens.AppTab
 import ru.thekodingklowns.onboarding.presentation.screens.users.Users
@@ -66,7 +67,7 @@ fun NavGraphBuilder.map() {
         composable(
             route = AppScreen.Map.route
         ) {
-
+            ImageZoom()
         }
     }
 }
