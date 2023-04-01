@@ -1,4 +1,4 @@
-package ru.thekodingklowns.onboarding.ui.theme
+package ru.thekodingklowns.onboarding.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

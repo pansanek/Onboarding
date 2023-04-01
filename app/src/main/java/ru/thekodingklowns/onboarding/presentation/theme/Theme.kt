@@ -1,4 +1,4 @@
-package ru.thekodingklowns.onboarding.ui.theme
+package ru.thekodingklowns.onboarding.presentation.theme
 
 import android.app.Activity
 import android.os.Build
