@@ -57,7 +57,7 @@ object ApiModule {
     @Provides
     fun provideRetrofit(client: OkHttpClient, converter: Converter.Factory): Retrofit =
         Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:8081/api")
+            .baseUrl("http://10.0.2.2:8081/api/")
             .client(client)
             .addConverterFactory(converter)
             .build()
